@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Aizat's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <style>
+        
+        b {
+        display: table-cell;
+        padding-right: 2em;
+        }
+
+        .colonallign {
+            list-style: none;
+            display: table;
+            padding-top: 40px;
+        }
+
+        .colonallign > li {
+            display: table-row;
+        }
+        .center{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+
+
+    </style>
+</head>
+
+<body><body background="images/background.jpg">
+  <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+<div class="header">
+  <marquee behavior="alternate"><h1 style="font-family: Trebuchet M; color: orange">WELCOME TO AIZAT'S WEBSITE</h1></marquee>
+  <table style="width:30%;color:orange" border="2" class="center" align="center">
+  <tr>
+    <th>Name</th>
+    <td>Nik Muhamad Aizat Hakimi Bin Zakaria</td>
+  </tr>
+
+  <tr>
+    <th>Student ID</th>
+    <td>2021341173</td>
+  </tr>
+  <tr>
+    <th>Class</th>
+    <td>BA2424C</td>
+  </tr>
+</font>
+</table>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="personal summary.html">Summary</a>
+   <a href="objective.html">Objective</a>
+    <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="extra.html">Curricular</a>
+  <a href="skills.html">Skills</a>
+  <a href="awards.html">Awards</a>
+  <a href="references.html">References</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="pdf/resume aizat.pdf" style="float:right">My CV</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2> My Career Objective</h2>
+    
+        <p align="justify"> 
+           <font face="tahoma">
+            
+          A leader who has the passion and dedication needed to drive new business leads through the implementation of a fully integrated marketing strategy. He is a very organized, and personable individual who shares a passion for innovation and who thrives when using the latest marketing techniques on highly creative projects. Right now, he is interested on join a company where hard work, loyalty and results are recognized and appreciated
+      
+    </div>
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>About Me</h3>
+      <img src="images/aizat passport.png" style="height: 180px; padding-left: 65px;" alt="passportimg">
+      <ul>
+        <li>Name: Nik Muhamad Aizat Hakimi Bin Zakaria</li>
+        <li>Student ID: 2021341173</li>
+        <li>Group: BA2424C</li>
+        <li>Course of Study: Finance</li>
+        <li>Studying At: University Technology MARA</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Contact Me</h3>
+      <p><img src="images/phone.png" alt="instagram" width="35" height="35" style="vertical-align: middle;">
+        <span style="padding-left: 6px;">01129466642</span>
+      <p><img src="images/email.png" alt="facebook" width="35" height="35" style="vertical-align: middle;">
+        <span style="padding-left: 6px;">aizathakimi1909@gmail.com</span>
+      <p><img src="images/address.png" alt="tiktok" width="35" height="35" style="vertical-align: middle;">
+        <span style="padding-left: 6px;">Kelantan, Malaysia</span>
+      </a></p>
+    </div>
+    <div class="card">
+        <h3>Follow My Social Media</h3>
+        <p><a href="https://www.instagram.com/nik_jakk/"><img src="images/instagram.png" alt="instagram" width="108" height="60" style= "padding-left: 3px; vertical-align: middle;">
+          <span style="color: white;">Instagram</span>
+        <p><a href="https://www.facebook.com/aizat.hakimi.98"><img src="images/facebook.png" alt="facebook" width="80" height="44" style=" padding-left: 18px; vertical-align: middle;">
+          <span style="color: white; padding-left: 27px">Facebook</span>
+        <p><a href="https://www.tiktok.com/@aizatt19?lang=en"><img src="images/tiktok1.png" alt="tiktok" width="110" height="51" style="vertical-align: middle;">
+          <span style="color: white;">TikTok</span>
+        </a></p>
+      </div>
+    <div class="card">
+      <h3>Malaysia Real Time</h3>
+      <center><iframe src="https://free.timeanddate.com/clock/i85hedwe/n5090/tlmy/fn7/fs17/fcfff/tct/pct/avb/ftbi/pl7/tt0/tw1/tm1/ts1/tb1" frameborder="0" width="234" height="26" allowtransparency="true"></iframe></center>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <audio id="myAudio" autoplay="true" loop="true">
+    <source src="sound/Blue Bird.mp3" type="audio/mp3">
+  </audio>
+  
+  <p><strong>Background Music</strong></p>
+  
+  <button onclick="playAudio()" type="button">Play</button>
+  <button onclick="pauseAudio()" type="button">Pause</button> 
+  <p><i>Song name: Blue Bird</i></p>
+  
+  <script>
+  var x = document.getElementById("myAudio"); 
+  
+  function playAudio() { 
+    x.play(); 
+  } 
+  
+  function pauseAudio() { 
+    x.pause(); 
+  } 
+  </script>
+</div>
+
+
+</body>
+</html>
